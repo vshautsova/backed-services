@@ -21,16 +21,12 @@ public class DevDataSourceConfiguration implements DataSourceConfiguration
 	@Value("${spring.datasource.dev.username}")
 	private String username;
 
-	@Value("${spring.datasource.dev.password}")
-	private String password;
-
 	@Bean
 	@Override
 	public DataSource dataSource() {
 		return DataSourceBuilder.create()
 				.url(url)
 				.username(username)
-				.password(password)
 				.build();
 	}
 }

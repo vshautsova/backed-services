@@ -21,16 +21,12 @@ public class QADataSourceConfiguration implements DataSourceConfiguration
 	@Value("${spring.datasource.qa.username}")
 	private String username;
 
-	@Value("${spring.datasource.qa.password}")
-	private String password;
-
 	@Bean
 	@Override
 	public DataSource dataSource() {
 		return DataSourceBuilder.create()
 				.url(url)
 				.username(username)
-				.password(password)
 				.build();
 	}
 }
