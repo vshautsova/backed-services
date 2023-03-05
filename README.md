@@ -21,3 +21,8 @@ Add test which tests your application by saving an entity to the data source.
 Enable actuator by adding https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator dependency. 
 Expose Default Spring Actuator by configuring SecurityWebFilterChain bean. 
 Add a new custom actuator endpoint(using @Component and @Endpoint(id = ...)) and return a custom response. 
+
+
+## Check implementation
+1. Import as maven project
+2. In each module execute mvn clean install to verify tests are passed correctly.
