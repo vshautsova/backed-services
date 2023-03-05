@@ -1,5 +1,6 @@
 package com.epam.vshautsova.configuration;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
@@ -13,11 +14,12 @@ import javax.sql.DataSource;
 @Configuration
 public class DataSourceConfiguration
 {
+    @ConditionalOnMissingBean
     @Bean
-    public DataSource dataSource()
+    public DataSource hsqlDataSource()
     {
         return new EmbeddedDatabaseBuilder()
-                .setType(EmbeddedDatabaseType.H2)
+                .setType(EmbeddedDatabaseType.HSQL)
                 .build();
     }
 }
