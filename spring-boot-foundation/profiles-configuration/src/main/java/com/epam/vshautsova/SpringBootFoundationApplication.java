@@ -13,4 +13,5 @@ public class SpringBootFoundationApplication
 	{
 		SpringApplication.run(SpringBootFoundationApplication.class, args);
 	}
+
 }
