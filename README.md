@@ -20,7 +20,15 @@ Add test which tests your application by saving an entity to the data source.
 
 Enable actuator by adding https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator dependency. 
 Expose Default Spring Actuator by configuring SecurityWebFilterChain bean. 
-Add a new custom actuator endpoint(using @Component and @Endpoint(id = ...)) and return a custom response. 
+Add a new custom actuator endpoint(using @Component and @Endpoint(id = ...)) and return a custom response.
+
+- profiles-configuration
+
+Separate Data Source Configurations Using Profiles:
+
+There should be 2 different Data Sources - one for QA and one for DEV.
+Introduce 2 data sources(using @Component and @Profile("QA")/ @Component and @Profile("DEV"))
+Implement test(using @ActiveProfile("DEV")) which tests your application by requesting data from DEV Data Source.
 
 
 ## Check implementation
