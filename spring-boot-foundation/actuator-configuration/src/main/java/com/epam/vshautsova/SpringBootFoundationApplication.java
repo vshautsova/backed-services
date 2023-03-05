@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.WebClient;
 
+/**
+ * Class to run spring boot application.
+ */
 @SpringBootApplication
 public class SpringBootFoundationApplication
 {

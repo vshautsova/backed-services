@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * Class to run spring boot application.
+ */
 @SpringBootApplication
 @ComponentScan("com.epam.vshautsova.configuration")
 public class SpringBootFoundationApplication
