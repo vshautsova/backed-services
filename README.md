@@ -52,6 +52,4 @@ Start a server and try to communicate with it using the clients you just wrote.
 2. Execute maven command `mvn clean install -f pom.xml`
 3. Start Java Server by command `mvn exec:java -Dexec.mainClass=com.epam.vshautsova.grpc.server.MessageServer`
 4. Start Java Client by command `mvn exec:java -Dexec.mainClass=com.epam.vshautsova.grpc.client.MessageClient`
-5. TODO
-
-
+5. Execute `python3 message_client.py` command from python-client directory
