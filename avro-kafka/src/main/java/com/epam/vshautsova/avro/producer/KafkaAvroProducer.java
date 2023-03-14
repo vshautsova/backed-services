@@ -4,12 +4,16 @@ import com.epam.vshautsova.avro.AvroMessage;
 import com.epam.vshautsova.avro.util.PropertiesHelper;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Kafka producer with Avro.
  */
 public class KafkaAvroProducer
 {
+	private static final Logger LOGGER = LogManager.getLogger(KafkaAvroProducer.class);
+
 	private final String topic;
 	private final KafkaProducer<String, AvroMessage> kafkaProducer;
 
@@ -33,13 +37,11 @@ public class KafkaAvroProducer
 		kafkaProducer.send(producerRecord, (recordMetadata, exception) -> {
 			if (exception == null)
 			{
-				System.out.println("Success");
-				System.out.println(recordMetadata.toString());
+				LOGGER.info("Success: " + recordMetadata.toString());
 			}
 			else
 			{
-				System.err.println("Failure");
-				System.err.println(exception.getMessage());
+				LOGGER.info("Failure: " + exception.getMessage());
 			}
 		});
 	}

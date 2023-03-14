@@ -13,6 +13,9 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <avro.version>1.11.1</avro.version>
+        <kafka-clients.version>3.4.0</kafka-clients.version>
+        <kafka-avro-serializer.version>7.3.2</kafka-avro-serializer.version>
+        <log4j.version>2.20.0</log4j.version>
     </properties>
 
     <repositories>
@@ -31,18 +34,23 @@
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
-            <version>3.4.0</version>
+            <version>${kafka-clients.version}</version>
         </dependency>
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>
-            <version>7.3.2</version>
+            <version>${kafka-avro-serializer.version}</version>
         </dependency>
-        <!--    <dependency>-->
-        <!--      <groupId>com.fasterxml.jackson.dataformat</groupId>-->
-        <!--      <artifactId>jackson-dataformat-avro</artifactId>-->
-        <!--      <version>2.11.2</version>-->
-        <!--    </dependency>-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

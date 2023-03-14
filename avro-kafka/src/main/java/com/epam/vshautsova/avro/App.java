@@ -23,7 +23,7 @@ public class App
         KafkaAvroProducer producer =
                 new KafkaAvroProducer(Constants.TOPIC, Constants.KAFKA_SERVER, Constants.SCHEMA_REGISTRY);
         KafkaAvroConsumer consumer =
-                new KafkaAvroConsumer(Constants.TOPIC, Constants.KAFKA_SERVER, Constants.SCHEMA_REGISTRY, "group1");
+                new KafkaAvroConsumer(Constants.TOPIC, Constants.KAFKA_SERVER, Constants.SCHEMA_REGISTRY, "message-group");
 
         ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(1);
         try
