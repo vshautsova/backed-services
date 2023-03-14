@@ -1,0 +1,7 @@
+{"namespace": "com.epam.vshautsova.avro",
+  "type": "record",
+  "name": "AvroMessage",
+  "fields": [
+    {"name": "text", "type": "string"}
+  ]
+}
