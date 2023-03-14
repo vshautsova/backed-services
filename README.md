@@ -53,3 +53,16 @@ Start a server and try to communicate with it using the clients you just wrote.
 3. Start Java Server by command `mvn exec:java -Dexec.mainClass=com.epam.vshautsova.grpc.server.MessageServer`
 4. Start Java Client by command `mvn exec:java -Dexec.mainClass=com.epam.vshautsova.grpc.client.MessageClient`
 5. Execute `python3 message_client.py` command from python-client directory
+
+# Avro and Kafka
+
+Create a Kafka producer and consumer using Avro to serialize messages.
+Create a simple Kafka producer that sends a simple message to a topic serializing it using Avro.
+Create a simple Kafka consumer which listens to a topic for a message, deserializes the message, and prints it.
+Start Kafka, create a topic, and run consumer and producer.
+
+## Check implementation
+1. Import as maven project
+2. Execute maven command `mvn clean install -f pom.xml`
+3. Start zookeeper, kafka & schema registry
+4. Run App and verify logs
